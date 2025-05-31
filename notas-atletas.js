@@ -1,3 +1,25 @@
+function calcularMedia(atletas) {
+  for (let i = 0; i < atletas.length; i++) {
+    let atleta = atletas[i];
+    let notasOriginais = atleta.notas.slice(); // cópia para exibir
+    let notasOrdenadas = atleta.notas.slice().sort((a, b) => a - b); // ordenar para média
+
+    // Pega as notas do meio (sem a menor e maior)
+    let notasValidas = notasOrdenadas.slice(1, 4);
+
+    // Soma as notas válidas
+    let soma = 0;
+    notasValidas.forEach(nota => soma += nota);
+
+    let media = soma / notasValidas.length;
+
+    console.log(`Atleta: ${atleta.nome}`);
+    console.log(`Notas Obtidas: ${notasOriginais.join(',')}`);
+    console.log(`Média Válida: ${media}`);
+    console.log('');
+  }
+}
+
 let atletas = [
   {
     nome: "Cesar Abascal",
@@ -17,22 +39,4 @@ let atletas = [
   }
 ];
 
-for (let i = 0; i < atletas.length; i++) {
-  let nome = atletas[i].nome;
-  let notasOriginais = atletas[i].notas;
-  let notasOrdenadas = [...notasOriginais].sort((a, b) => a - b); // Cópia ordenada
-  let notasValidas = notasOrdenadas.slice(1, 4); // Remove a menor e a maior nota
-
-  // Calcula a média das três notas do meio
-  let soma = 0;
-  notasValidas.forEach(function (nota) {
-    soma += nota;
-  });
-
-  let media = soma / notasValidas.length;
-
-  // Saída no console
-  console.log(`Atleta: ${nome}`);
-  console.log(`Notas Obtidas: ${notasOriginais.join(",")}`);
-  console.log(`Média Válida: ${media.toFixed(6)}\n`);
-}
+calcularMedia(atletas);
