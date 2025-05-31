@@ -1,9 +1,16 @@
-# notas-atletas
+# Projeto Notas Atletas
 
-## Objetivo do Projeto
+## Objetivo
 
-Este projeto calcula a média das notas de atletas em uma competição de ginástica artística. Cada atleta recebe cinco notas de jurados, e a média é calculada desconsiderando a maior e a menor nota.
+Este projeto tem como objetivo calcular a média das notas dos atletas em uma competição de ginástica artística. Para cada atleta, são recebidas cinco notas dos jurados, e a média válida é calculada desconsiderando a maior e a menor nota.
 
-## Como Rodar o Código
+## Como rodar o código
 
-1. Clone este repositório em sua máquina:
+1. Clone ou faça o download deste repositório.
+2. Abra o arquivo `notas-atletas.js` em um ambiente que execute JavaScript, como o Node.js ou o console do navegador.
+3. Execute o script para ver o resultado no console.
+
+Exemplo usando Node.js:
+
+```bash
+node notas-atletas.js
